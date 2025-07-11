@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saqib Brohi | Portfolio</title>
+  <style>
+:root {
+  --bg-color: linear-gradient(to bottom right, #1a1c1f, #212529); /* Darker background */
+  --text-color: #f8f9fa;         /* Light gray-white text */
+  --accent-color: #adb5bd;       /* Soft gray accent */
+  --card-bg: #2b2d30;            /* Darker than #495057 */
+  --border-color: #495057;       /* Subtle deep border */
+  --nav-bg: #1f2124;             /* Darker nav bar */
+  --section-bg: #212529;         /* Even background across */
+  --banner-bg: #343a40;          /* Slight contrast for banner */
+}
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav {
+  background-color: var(--nav-bg);
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  border-bottom: 1px solid var(--border-color);
+}
+
+
+
+.banner img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid var(--accent-color);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  transform: translateY(0);
+  animation: floatImage 3s ease-in-out infinite;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  animation: floatCard 2.5s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes floatCard {
+  0% { transform: translateY(-5px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(-5px); }
+}
+
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    nav ul li a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      color: var(--accent-color);
+    }
+
+    section {
+      padding: 4rem 1rem;
+      text-align: center;
+    }
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30rem; /* Increased gap between image and text */
+  flex-wrap: wrap;
+  background-color: var(--banner-bg); /* Uses Dartmouth green */
+  padding: 4rem 1rem;
+}
+
+    .banner-content h1 {
+      font-size: 2rem;
+  color: #ffffff; /* Pure white for strong contrast */
+      animation: fadeSlideUp 0.8s ease forwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .banner-content p {
+      margin-top: 1rem;
+      animation: fadeSlideUp 0.8s ease forwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+  color: #ffffff; /* Pure white for strong contrast */
+    }
+
+    .project-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .project {
+      background-color: var(--card-bg);
+      padding: 1rem;
+      border-radius: 10px;
+      width: 300px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 188, 212, 0.2);
+    }
+
+    .project img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background-color: var(--accent-color);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn:hover {
+      background-color: #0097a7;
+      transform: scale(1.05);
+      
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 400px;
+      margin: auto;
+    }
+
+    input, textarea, button {
+      padding: 0.75rem;
+      border-radius: 5px;
+      border: 1px solid var(--border-color);
+      background-color: #222;
+      color: var(--text-color);
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: var(--accent-color);
+    }
+
+   footer {
+  background-color: var(--nav-bg); /* Consistent dark tone */
+  color: var(--text-color);        /* Soft white text */
+  text-align: center;
+  padding: 2rem 1rem;
+  border-top: 1px solid var(--border-color); /* Clean top border */
+}
+
+
+    footer a {
+      color: var(--accent-color);
+      margin: 0 0.5rem;
+      text-decoration: none;
+    }
+    @keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#education {
+  background-color: var(--section-bg);
+  padding: 4rem 2rem;
+  border-radius: 10px;
+  margin: 2rem auto;
+  max-width: 990px;
+  text-align: left;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  animation: fadeSlideUp 0.8s ease forwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#education:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+}
+
+
+#skills ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+#skills li {
+  background-color: #222;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 0.8s ease-in-out;
+}
+
+
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="home" class="banner">
+    <div class="banner-content">
+      <h1>Saqib Ali Brohi</h1>
+      <p>Data Analyst | Excel | Python | Front Hand</p>
+      
+    </div>
+    <img src="img.png" alt="Saqib Brohi">
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m a dedicated Data Analyst with hands-on experience in Excel, SQL, Power BI, and Python. My journey also includes front-end web development using HTML, CSS, and JavaScript — allowing me to build user-friendly dashboards and interfaces. I enjoy combining data insights with interactive visuals to solve real-world problems.</p>
+  </section>
+  </section>
+
+<section id="education">
+  <h2>Education</h2>
+  <ul>
+  <li><strong>Undergraduate Student</strong> — Bachelor’s in Computer Science (Ongoing)</li>
+  <li><strong>Data Science Course</strong> — Currently enrolled at <strong>SMIT</strong></li>
+  <li><strong>Advanced Web Development Course</strong> — Completed at <strong>Softsols Pakistan</strong>, certified by <strong>NAVTTC</strong></li>
+</ul>
+
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <ul style="list-style: none; padding: 0;">
+    <li>🔹 Excel (VLOOKUP, PivotTables, Dashboarding)</li>
+    <li>🔹 SQL</li>
+    <li>🔹 Power BI</li>
+    <li>🔹 Python </li>
+    <li>🔹 HTML, CSS, JavaScript</li>
+    <li>🔹 WordPress</li>
+  </ul>
+</section>
+
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-list">
+      <div class="project">
+        <img src="Screenshot 2025-07-06 165735.png" alt="Project 1">
+        <h3>Excel Ticket Booking</h3>
+        <p>The Airline Ticket system is a smart Excel-based form that auto-fills passenger data using VLOOKUP, offering fast, error-free booking with a clean and user-friendly layout.Ideal for small travel agencies.</p>
+        <a href="https://github.com/brohisaqib/AirLine-Ticket-Excel" class="btn">View Project</a>
+      </div>
+      <div class="project">
+        <img src="phramaweb.png" alt="Project 2">
+        <h3>Pharma Web Page</h3>
+        <p>The Parma web page is a clean, professional website designed using HTML, CSS, and JavaScript. It showcases a modern layout with smooth navigation, responsive design, and a focus on user experience.</p>
+        <a href="https://brohisaqib.github.io/Pharma-Web-FrontHand/" class="btn">View Project</a>
+      </div>
+      <div class="project">
+        <img src="goblin web.png" alt="Project 3">
+        <h3>Goblin Game War Web</h3>
+        <p>A creative and interactive Goblin-themed web page built using HTML, CSS, and JavaScript. This fun project highlights my front-end skills with custom animations, responsive design, and smooth transitions to engage users.</p>
+        <a href="https://brohisaqib.github.io/Goblines-Web-Page/" class="btn">View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="resume">
+    <h2>Resume</h2>
+    <a href="resume.pdf" download class="btn">Download My CV</a>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>Connect with me:</p>
+    <a href="https://www.linkedin.com/in/saqib-ali-brohi-290b832b3/">LinkedIn</a>
+    <a href="https://github.com/brohisaqib">GitHub</a>
+    <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=new">Email</a>
+  </footer>
+
+  <script>
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Message sent! I will contact you shortly.');
+      this.reset();
+    });
+  </script>
+  
+</body>
+</html>
